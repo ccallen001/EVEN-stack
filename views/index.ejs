@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>EVEN Stack</title>
+
+	<!-- main styling -->
+	<link rel="stylesheet" href="../styles/main.css">
+
+	<!-- include vue and vue router -->
+	<script src="../vue/vue.min.js"></script>
+	<script src="../vue/vue.router.js"></script>
+</head>
+
+<body>
+	<h1>you are viewing the index.ejs file</h1>
+
+	<button id="btn-get-data" type="button">retrieve data</button>
+
+	<!-- include the routes as defined in the vue folder -->
+	<%- include('../vue/routes.ejs'); %>
+</body>
+
+<!-- anything related to general logic ...view files should house their own logic -->
+<script src="../scripts/main.js"></script>
+
+</html>

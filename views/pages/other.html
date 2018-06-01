@@ -1,0 +1,26 @@
+<!-- style, structure, and logic should be encapsulated like this -->
+
+<style>
+	#other .container-inline {
+		display: inline-block;
+		padding: 0.5rem;
+		border: 1px solid;
+		border-radius: 0.25rem;
+	}
+</style>
+
+<div class="route" id="other">
+	<div class="container-inline">
+		<h1>other</h1>
+		<p>{{ msg }}</p>
+	</div>
+</div>
+
+<script>
+	new Vue({
+		el: '.route#other',
+		data: {
+			msg: 'you\'re seeing other stuff rendered by vue\'s router'
+		}
+	});
+</script>

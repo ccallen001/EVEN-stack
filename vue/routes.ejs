@@ -1,0 +1,30 @@
+<!-- using vue's router system -->
+
+<div id="container-router">
+	<div class="container--router-links">
+		<router-link to="/">go home</router-link>&nbsp;
+		<router-link to="/other">go other</router-link>
+	</div>
+
+	<router-view></router-view>
+</div>
+
+<!-- include route templates in here -->
+<div style="display: none;">
+	<%- include('../views/pages/other.html'); %>
+</div>
+
+<script>
+	new Vue({
+		router: new VueRouter({
+			////////////////////////////////////////////////////////////////////
+			routes: [{
+				path: '/other',
+				component: {
+					template: document.querySelector('.route#other').outerHTML
+				}
+			}]
+			////////////////////////////////////////////////////////////////////
+		})
+	}).$mount('#container-router')
+</script>
